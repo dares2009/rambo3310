@@ -1,0 +1,105 @@
+/* Стили для кнопок вкладок */
+.tablinks {
+    background-color: transparent;
+    color: #8b57c9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* Стили для выбранной кнопки */
+  .tablinks.active {
+    color: #00bfff;
+  }
+  
+  /* Стили для содержимого вкладок */
+  .tabcontent {
+    display: none;
+    padding: 2rem;
+    border: 1px solid #8b57c9;
+    background-color: #1f1d2b;
+    color: #fff;
+  }
+  
+  /* Стили для выбранного содержимого */
+  #AboutUs {
+    display: block;
+  }
+   a {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+   a:hover {
+    background-color: #c0392b;
+  }
+  a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7289DA;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .button:hover img {
+    animation: zoom-in 0.5s ease-out forwards;
+  }
+  
+  @keyframes zoom-in {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+  
+  .button:hover:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+  }
+  
+  .button:hover:before {
+    animation: circle 0.5s ease-out forwards;
+  }
+  
+  @keyframes circle {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 1;
+    }
+  }
+  
+  
+  
